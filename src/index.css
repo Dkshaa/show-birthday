@@ -218,11 +218,6 @@ p {
   text-align: center;
 }
 
-.birthday-card .btn {
-  width: 100%;
-  margin: 1rem 0 0;
-}
-
 .btn {
   display: inline-block;
   background: var(--clr-primary-5);
@@ -242,6 +237,27 @@ p {
 .btn:hover {
   background: var(--clr-primary-1);
   color: var(--clr-primary-5);
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.birthday-card .btn {
+  width: 100%;
+  margin: 0;
+}
+
+.secondary-btn {
+  background: var(--clr-grey-1);
+}
+
+.secondary-btn:hover {
+  background: var(--clr-grey-5);
+  color: var(--clr-white);
 }
 .item {
   background: var(--clr-white);
