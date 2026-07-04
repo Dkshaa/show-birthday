@@ -4,6 +4,7 @@ import '../../src/index.css';
 
 const Todo = () => {
   const [people, setPeople] = useState(Data);
+  const hasBirthdays = people.length > 0;
 
   const removePerson = (id) => {
     setPeople((currentPeople) =>
@@ -14,9 +15,7 @@ const Todo = () => {
   return (
     <main className="birthday-card">
       <h1>{people.length} birthdays today</h1>
-      {people.length === 0 ? (
-        <p className="empty-message">No birthdays left for today.</p>
-      ) : (
+      {hasBirthdays ? (
         people.map((person) => {
           const { id, name, age, image } = person;
 
@@ -33,10 +32,17 @@ const Todo = () => {
             </article>
           );
         })
+      ) : (
+        <p className="empty-message">No birthdays left for today.</p>
       )}
-      <button className="btn" onClick={() => setPeople([])}>
-        Clear All
-      </button>
+      <div className="button-row">
+        <button className="btn" onClick={() => setPeople([])}>
+          Clear All
+        </button>
+        <button className="btn secondary-btn" onClick={() => setPeople(Data)}>
+          Reset List
+        </button>
+      </div>
     </main>
   );
 };
