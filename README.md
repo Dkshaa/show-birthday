@@ -25,6 +25,13 @@ npm start
 
 Open `http://localhost:3000` in your browser.
 
+## Project Structure
+
+- `src/App.js` renders the main app shell
+- `src/Data/Todo.js` manages and displays the birthday list
+- `src/Data/data.js` stores the birthday people data
+- `src/index.css` contains the shared layout and card styles
+
 ## Available Scripts
 
 - `npm start` runs the app locally
