@@ -26,7 +26,11 @@ const Todo = () => {
                 <h4>{name}</h4>
                 <p>{age} years old</p>
               </div>
-              <button className="text-btn" onClick={() => removePerson(id)}>
+              <button
+                className="text-btn"
+                onClick={() => removePerson(id)}
+                aria-label={`Remove ${name} from birthday list`}
+              >
                 remove
               </button>
             </article>
@@ -36,7 +40,11 @@ const Todo = () => {
         <p className="empty-message">No birthdays left for today.</p>
       )}
       <div className="button-row">
-        <button className="btn" onClick={() => setPeople([])}>
+        <button
+          className="btn"
+          onClick={() => setPeople([])}
+          disabled={!hasBirthdays}
+        >
           Clear All
         </button>
         <button className="btn secondary-btn" onClick={() => setPeople(Data)}>

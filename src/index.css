@@ -239,6 +239,12 @@ p {
   color: var(--clr-primary-5);
 }
 
+.btn:disabled {
+  background: var(--clr-grey-8);
+  color: var(--clr-grey-5);
+  cursor: not-allowed;
+}
+
 .button-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
