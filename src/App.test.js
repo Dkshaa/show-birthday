@@ -10,4 +10,9 @@ test('shows birthdays and clears the list', async () => {
 
   expect(screen.getByText(/no birthdays left for today/i)).toBeInTheDocument();
   expect(screen.getByRole('button', { name: /clear all/i })).toBeDisabled();
+
+  fireEvent.click(screen.getByRole('button', { name: /reset list/i }));
+
+  expect(screen.getByRole('heading', { name: /5 birthdays today/i })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /clear all/i })).not.toBeDisabled();
 });
