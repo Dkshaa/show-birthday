@@ -7,7 +7,7 @@ Show Birthday is a small React app that displays a list of people who have birth
 - Displays birthday names, ages, and profile photos
 - Shows the current number of birthdays
 - Lets users remove individual birthday cards
-- Includes a clear-all action and empty state
+- Includes clear-all, reset, and empty-state actions
 
 ## Getting Started
 
