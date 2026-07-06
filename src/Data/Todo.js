@@ -5,6 +5,7 @@ import '../../src/index.css';
 const Todo = () => {
   const [people, setPeople] = useState(Data);
   const hasBirthdays = people.length > 0;
+  const birthdayLabel = people.length === 1 ? 'birthday' : 'birthdays';
 
   const removePerson = (id) => {
     setPeople((currentPeople) =>
@@ -14,7 +15,9 @@ const Todo = () => {
 
   return (
     <main className="birthday-card">
-      <h1>{people.length} birthdays today</h1>
+      <h1>
+        {people.length} {birthdayLabel} today
+      </h1>
       {hasBirthdays ? (
         people.map((person) => {
           const { id, name, age, image } = person;
