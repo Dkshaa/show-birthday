@@ -32,6 +32,10 @@ Open `http://localhost:3000` in your browser.
 - `src/Data/data.js` stores the birthday people data
 - `src/index.css` contains the shared layout and card styles
 
+## How It Works
+
+The app starts with the birthday data from `src/Data/data.js`. Users can remove one birthday card, clear the full list, or reset the list back to the original data.
+
 ## Available Scripts
 
 - `npm start` runs the app locally
