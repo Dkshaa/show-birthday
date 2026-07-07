@@ -265,6 +265,12 @@ p {
   background: var(--clr-grey-5);
   color: var(--clr-white);
 }
+
+@media screen and (max-width: 480px) {
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+}
 .item {
   background: var(--clr-white);
   display: flex;
