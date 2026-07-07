@@ -40,7 +40,9 @@ const Todo = () => {
           );
         })
       ) : (
-        <p className="empty-message">No birthdays left for today.</p>
+        <p className="empty-message">
+          No birthdays left for today. Use Reset List to bring everyone back.
+        </p>
       )}
       <div className="button-row">
         <button
