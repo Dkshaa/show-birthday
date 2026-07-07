@@ -41,3 +41,11 @@ The app starts with the birthday data from `src/Data/data.js`. Users can remove 
 - `npm start` runs the app locally
 - `npm test` starts the test runner
 - `npm run build` creates a production build
+
+## Testing
+
+Run the test suite once with:
+
+```bash
+npm test -- --watchAll=false
+```
